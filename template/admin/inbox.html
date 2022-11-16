@@ -1,0 +1,63 @@
+{% extends 'admin/hfadmin.html' %}
+{% block content %}
+<!--inner block start here-->
+<div class="inner-block">
+    <div class="inbox">
+    	  <h2>Product registration</h2>
+    	 <form class="form-horizontal" action='/inbox/' method="POST" enctype="multipart/form-data">
+    	 	 {% csrf_token %}
+  <fieldset>
+    <div id="legend">
+      <legend class="">Register</legend>
+    </div>
+    <div class="control-group">
+      <!-- product name -->
+      <label class="control-label"  for="Prodctname">Product name</label>
+      <div class="controls">
+        <input type="text" id="username" name="productname" placeholder="" class="input-xlarge">
+        <p class="help-block"></p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- product details -->
+      <label class="control-label" for="Details">Details</label>
+      <div class="controls">
+        <input type="text" id="email" name="details" placeholder="" class="input-xlarge">
+        <p class="help-block"></p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- price-->
+      <label class="control-label" for="price">Price</label>
+      <div class="controls">
+        <input type="text" id="password" name="price" placeholder="" class="input-xlarge">
+        <p class="help-block"></p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Image -->
+      <label class="control-label"  for="Image">Images</label>
+      <div class="controls">
+        <input type="file" id="password_confirm" name="proimg" placeholder="" class="input-xlarge">
+        <p class="help-block"></p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success">Register</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+            </div>
+          <div class="clearfix"> </div>     
+   </div>
+</div>
+
+<!--inner block end here-->
+{% endblock %}

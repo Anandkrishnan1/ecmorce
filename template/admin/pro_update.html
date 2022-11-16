@@ -1,0 +1,100 @@
+{% extends 'admin/hfadmin.html' %}
+{% block content %}
+<!--inner block start here-->
+<div class="inner-block">
+    <div class="inbox">
+    	  <h2>Product registration</h2>
+    	    <div class="panel-heading">
+              <h3 class="panel-title">update here </h3>
+            </div>
+            <div class="panel-body">
+             {% for x in usres %}
+              <form role="form" action="/proupdate/?uid={{x.id}}"  enctype="multipart/form-data"  method="post">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <label>Product Name</label>
+                    <div class="form-group">
+                      <input type="text" name="productname" id="Product Name" value="{{x.Pro_name}}" class="form-control input-sm" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <label>price</label>
+                    <div class="form-group">
+                      <input type="text" name="details" id="price"  value="{{x.Pro_price}}"class="form-control input-sm" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>product description</label>
+                  <input type="text"  style="width:500px height:500px"; class="form-control" name="price"  value= "{{x.Pro_des}}"   rows="3" placeholder="" >
+
+                </div>
+                 <div class="form-group">
+                 
+                  <input type="radio"  name="check" id="abc" onchange="radio();" value= "yes">Yes
+                  <input type="radio"  name="check" onchange="radio();"  value= "no" checked >No
+
+                </div>
+                 </div>
+                   <div class="form-group">
+                    <img src="{{x.Pro_img.url}}" width="200px" height="200">
+                     </div>
+                     
+                        
+                  <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6" id="div1" style="display: none;">
+                    <label>Product Images</label>
+                    <div class="form-group">
+                      <input type="FILE"   name="Images" id="Images" class="form-control input-sm" placeholder="" >
+                    </div>
+                    
+                  </div>
+                 
+                </div>
+                
+                <input type="submit" value="update" class="btn btn-info btn-block">
+              
+              </form>
+              {% endfor %}
+              
+            </div>
+          </div>
+            </div>
+          <div class="clearfix"> </div>     
+   </div>
+</div>
+
+
+<script>
+  function radio(){
+
+     var x= document.getElementById("abc");
+
+        var img = document.getElementById("div1");
+        
+
+
+        img.style.display = x.checked ? "block" : "none";
+
+     if (x.checked){
+            document.getElementById("Images").required = true;
+
+        }
+        else{
+             document.getElementById("Images").required = false;
+
+
+        }
+
+    }
+
+
+
+
+
+</script>
+
+<!--inner block end here-->
+{% endblock %}

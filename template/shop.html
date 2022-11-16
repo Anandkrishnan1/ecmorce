@@ -1,0 +1,458 @@
+
+<!--
+Author:W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Baggage Ecommerce Category Bootstrap Responsive Web Template | Shop :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Baggage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+
+<body>
+    <div class="main-sec inner-page">
+
+ {% extends 'headerfooter.html' %}
+{% block content %}
+    <!-- //banner-->
+    <!--/banner-bottom -->
+    <section class="banner-bottom py-5">
+        <div class="container py-5">
+            <h3 class="title-wthree mb-lg-5 mb-4 text-center">Shop Now</h3>
+            <!--/row-->
+            <div class="row shop-wthree-info text-center">
+                {% for x in prd %}
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="{{x.Pro_img.url}}" class="img-fluid" style="width: 191px;height: 191px;object-fit: contain;" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/?uid={{x.id}}" value={{x.Pro_name}}>{{x.Pro_name}}</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line" value="{{x.Pro_price}}"></span> {{x.Pro_price}}</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b2.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Shoulder Bag (Pink) </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$799</span> $675.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b3.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Sling Bag </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$599</span> $475.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b4.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Tote (Blue) </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$799</span> $675.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+            <!--//row-->
+            <!--/row1-->
+            <!-- <div class="row shop-wthree-info text-center">
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b5.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Satchel (Yellow) </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$999</span> $875.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b6.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Shoulder Bag (Orange)</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$799</span> $675.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b8.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Hobo (Blue) </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$799</span> $675.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b7.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Satchel (Pink)</a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$599</span> $475.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+ -->
+            <!--//row1-->
+            <!--/row-->
+           <!--  <div class="row shop-wthree-info text-center mb-5">
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b3.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Sling Bag </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$599</span> $475.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b4.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Tote (Blue) </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$799</span> $675.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b1.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Messenger Bag </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$799</span> $675.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-thumb-item">
+                            <img src="/static/images/b2.jpg" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4>
+                                <a href="/single/">Shoulder Bag (Pink) </a>
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <span class="money"><span class="line">$799</span> $675.00</span>
+                                </div>
+                            </div>
+                            <ul class="stars">
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+ -->
+                <!--//row-->
+            </div>
+            <nav aria-label="Page navigation example mt-5">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <!-- /banner-bottom -->
+    <!--/newsletter -->
+    <section class="newsletter-w3pvt py-5">
+        <div class="container py-md-5">
+            <form method="post" action="#">
+                <p class="text-center">Subscribe to the Handbags Store mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+               <div class="row subscribe-sec">
+                    <div class="col-md-9">
+                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email.." name="email" required="">
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <button type="submit" class="btn submit">Subscribe</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!--//newsletter -->
+    <!--/shipping-->
+    <section class="shipping-wthree">
+        <div class="shiopping-grids d-lg-flex">
+            <div class="col-lg-4 shiopping-w3pvt-gd text-center">
+                <div class="icon-gd"><span class="fa fa-truck" aria-hidden="true"></span>
+                </div>
+                <div class="icon-gd-info">
+                    <h3>FREE SHIPPING</h3>
+                    <p>On all order over $2000</p>
+                </div>
+            </div>
+            <div class="col-lg-4 shiopping-w3pvt-gd sec text-center">
+                <div class="icon-gd"><span class="fa fa-bullhorn" aria-hidden="true"></span></div>
+                <div class="icon-gd-info">
+                    <h3>FREE RETURN</h3>
+                    <p>On 1st exchange in 30 days</p>
+                </div>
+            </div>
+            <div class="col-lg-4 shiopping-w3pvt-gd text-center">
+                <div class="icon-gd"> <span class="fa fa-gift" aria-hidden="true"></span></div>
+                <div class="icon-gd-info">
+                    <h3>MEMBER DISCOUNT</h3>
+                    <p>Register &amp; save up to $29%</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!--//shipping-->
+    {% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'admin/hfadmin.html' %}
+{% block content %}
+<!--inner block start here-->
+<div class="inner-block">
+    	 
+    	 	 <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Productname</th>
+        <th>Details</th>
+        <th>Price</th>
+        <th>Image</th>
+
+       
+      </tr>
+    </thead>
+    <tbody>
+    	{% for x in users %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{x.Pro_name}}</td>
+        <td>{{x.Pro_des}}</td>
+        <td>{{x.Pro_price}}</td>
+        <td><img src="{{x.Pro_img.url}}" width="100px" height="100px"> </td>
+        <td><a href="/proupdate/?uid={{x.id}}">edit</td>
+      
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<form>
+  <select name="Pro_name" id="Pro_name" onchange="dataaj();">
+    <option >select product</option>
+
+    {% for x in users %}
+    <option value="{{x.id}}">{{x.name}}</option>
+    {% endfor %}
+  </select>
+</form>
+    	 
+  
+       <table border="3px" width="100%">
+         <tr>
+           <td >Pro_name</td>
+           <td>Pro_des</td>
+           <td>Pro_price</td>
+           <td>Pro_img</td>
+         </tr>
+         <tr>
+          <td  id="nameid"></td>
+           <td id="desid"></td>
+           <td id="priceid"></td>
+           <td id="imageid"></td>
+           
+         </tr>
+       </table>
+
+ 
+    	
+         
+  
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+
+<script >
+
+  
+function dataaj()
+{
+  alert("a");
+  var d=document.getElementById('Pro_name').value;
+
+  $.ajax({
+
+        url:'/ajaxview/',
+        data:
+        {
+          'proname':d
+        },
+        datatype: 'json',
+        success: function(data)
+        {
+          document.getElementById("nameid").innerHTML=data.aa;
+          document.getElementById("desid").innerHTML=data.bb;
+          document.getElementById("priceid").innerHTML=data.cc;
+          document.getElementById("imageid").innerHTML=data.dd;
+
+
+        }
+
+
+      });
+}       
+
+
+
+</script> 
+
+<!--inner block end here-->
+{% endblock %}
